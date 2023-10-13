@@ -23,12 +23,10 @@ public class DDisplayNameTest {
     @Test
     @DisplayName("findOne smartphone id 1")
     void test2() {
-
         SmartPhoneService service = new SmartPhoneServiceImpl();
 
-        SmartPhone result = service.findOne(1L);
-        assertNotNull(result);
-        assertEquals(1L, result.getId());
-
+       SmartPhone result = service.findOne(1L);
+       assertNotNull(result);
+       assertEquals(1L, result.getId());
     }
 }
