@@ -5,43 +5,39 @@ import org.junit.jupiter.api.condition.*;
 
 public class BConditionalTest {
 
-    // JRE
-
+   //JRE
     @EnabledOnJre(JRE.JAVA_8)
     @Test
     void test1() {
-        System.out.println("test1 java 8");
+        System.out.println("Test 1 Java 8");
     }
     @EnabledOnJre(JRE.JAVA_16)
     @Test
     void test2() {
-        System.out.println("test2 java 16");
+        System.out.println("Test 2 Java 16");
     }
-
-    @EnabledForJreRange(min = JRE.JAVA_8, max=JRE.JAVA_11)
+    @EnabledForJreRange(min=JRE.JAVA_8, max=JRE.JAVA_16)
     @Test
     void test3() {
-        System.out.println("test3 range");
+        System.out.println("Test 3 Java 8 to 16");
     }
 
+    //Sistema operativo
 
-    @Test
     @EnabledOnOs(OS.LINUX)
+    @Test
     void test4() {
-        System.out.println("test4 linux");
+        System.out.println("Test 3 Java 8 to 16");
     }
 
     @Test
     void printEnv(){
         System.getenv().forEach(
-                (key, value) -> System.out.println(key + " - " + value)
+                (k,v)->System.out.println(k+" : "+v)
         );
 
         System.getProperties().forEach(
-                (key, value) -> System.out.println(key + " - " + value)
+                (k,v)->System.out.println(k+" : "+v)
         );
     }
-
-
-
 }
