@@ -10,10 +10,11 @@ import static org.junit.jupiter.api.Assertions.*;
 public class BMethodTest {
 
     SmartPhoneService service;
+
     @BeforeEach
     void setUp() {
         System.out.println("setUp");
-        service = new SmartPhoneServiceImpl();
+       service = new SmartPhoneServiceImpl();
     }
 
     @AfterEach
@@ -33,5 +34,4 @@ public class BMethodTest {
         System.out.println("test2");
         assertTrue(true);
     }
-
 }
