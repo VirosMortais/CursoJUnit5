@@ -8,17 +8,16 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class ADisabledTest {
 
     @Test
-    //@Disabled("Until bug #12300 fix")
+    @Disabled("Disabled until bug #999 has been fixed")
     void test1() {
         System.out.println("test1");
         assertTrue(true);
     }
 
     @Test
-    @Disabled("Until feature #11900")
+    @Disabled("Disabled until bug #99 has been fixed")
     void test2() {
         System.out.println("test2");
         assertTrue(true);
     }
-
 }
