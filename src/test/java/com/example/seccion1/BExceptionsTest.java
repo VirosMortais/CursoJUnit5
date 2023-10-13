@@ -15,7 +15,5 @@ public class BExceptionsTest {
         SmartPhoneService service = new SmartPhoneServiceImpl();
 
         assertThrows(IllegalArgumentException.class, () -> service.findOne(null));
-
-
     }
 }
