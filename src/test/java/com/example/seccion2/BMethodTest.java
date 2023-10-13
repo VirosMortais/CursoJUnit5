@@ -5,6 +5,8 @@ import com.example.demo.service.SmartPhoneServiceImpl;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BMethodTest {
@@ -28,6 +30,7 @@ public class BMethodTest {
         System.out.println("test1");
         assertTrue(true);
     }
+
 
     @Test
     void test2() {

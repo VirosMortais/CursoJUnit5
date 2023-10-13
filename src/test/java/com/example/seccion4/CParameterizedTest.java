@@ -45,4 +45,6 @@ public class CParameterizedTest {
     private static Stream<String> namesProvider(){
         return Stream.of("user 1", "user 2", "user 3");
     }
+
+
 }
