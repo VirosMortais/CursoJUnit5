@@ -1,64 +1,70 @@
 package com.example.seccion4;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-@DisplayName("Tests para servicio SmartPhone")
+@DisplayName("Test para servicio SmartPhone")
 public class ANestedTest {
 
     @Test
-    @DisplayName("Test1")
+    @Disabled("TEST1")
     void test1() {
-        System.out.println("test1");
+        System.out.println("Test 1");
         assertTrue(true);
     }
 
     @Nested
     @DisplayName("operaciones recuperar datos")
-    class Grupo1 {
+    class Group1{
         @Test
         @DisplayName("Find all()")
         void test2() {
-            System.out.println("test2");
+            System.out.println("Test 2");
             assertTrue(true);
         }
 
         @Test
-        @DisplayName("Find one()")
+        @DisplayName("find one()")
         void test3() {
-            System.out.println("test3");
+            System.out.println("Test 3");
             assertTrue(true);
         }
+
 
         @Test
-        @DisplayName("Find by CPU cores()")
+        @DisplayName("find by CPU cores()")
         void test4() {
-            System.out.println("test4");
+            System.out.println("Test 4");
             assertTrue(true);
         }
-
     }
 
     @Nested
     @DisplayName("operaciones insercion nuevos datos")
-    class Grupo2 {
-
+    class Group2{
         @Test
-        @DisplayName("Insert one")
+        @DisplayName("insert one()")
         void test5() {
-            System.out.println("test5");
+            System.out.println("Test 5");
             assertTrue(true);
         }
 
         @Test
-        @DisplayName("Insert in batch")
+        @DisplayName("insert in batch()")
         void test6() {
-            System.out.println("test5");
+            System.out.println("Test 6");
+            assertTrue(true);
+        }
+
+        @Test
+        @DisplayName("insert() with exception")
+        void test7() {
+            System.out.println("Test 7");
             assertTrue(true);
         }
     }
-
-
 }
