@@ -13,40 +13,36 @@ public class CParameterizedTest {
 
     @ParameterizedTest
     @CsvSource({
-            "1, Empleado 1, 30000",
-            "2, Empleado 2, 40000",
-            "3, Empleado 3, 50000",
-            "4, Empleado 4, 50000",
+            "1, empleado 1, 1000",
+            "2, empleado 2, 2000",
+            "3, empleado 3, 3000"
     })
-    void test1(Long id, String name, Integer salary) {
+    void test1(long id, String name, Integer salary){
         System.out.println("id: " + id + ", name: " + name + ", salary: " + salary);
     }
 
     @ParameterizedTest
     @CsvFileSource(resources = "/users-data.csv", numLinesToSkip = 1)
-    void test2(Long id, String name, Integer salary) {
+    void test2(long id, String name, Integer salary){
         System.out.println("id: " + id + ", name: " + name + ", salary: " + salary);
     }
 
     enum Role{
         ADMIN, AUTHOR, ANONYMOUS
     }
-
     @ParameterizedTest
     @EnumSource(Role.class)
-    void test3(Role role) {
-        System.out.println("role: " +  role);
+    void test3(Role role){
+        System.out.println("Role: " + role);
     }
 
     @ParameterizedTest
     @MethodSource("namesProvider")
-    void test4(String name) {
-        System.out.println("Name: " +  name);
+    void test4(String name){
+        System.out.println("Name: " + name);
     }
 
     private static Stream<String> namesProvider(){
-        return Stream.of("Name1", "Name2", "Name3");
+        return Stream.of("user 1", "user 2", "user 3");
     }
-
-
 }
